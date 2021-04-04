@@ -1,0 +1,23 @@
+﻿@using WebApplication4.Services
+@inject IServiceActions service
+@{
+    ViewData["Title"] = "AccessServiceDirectly";
+}
+<h1>@ViewData["Title"]</h1>
+<b>
+    <div>Rand Value First : @service.val1</div>
+    <div>Rand Value Second : @service.val2</div>
+    <div>Add: </div>
+</b>
+<div> @service.val1 +  @service.val2 = @service.add()</div>
+<b><div>Sub : </div></b>
+<div>@service.val1 -  @service.val2 =  @service.sub()</div>
+<b><div>Mult : </div></b>
+<div>@service.val1 *  @service.val2 =  @service.mult()</div>
+<b><div>Div :</div></b>
+<div>@service.val1 /  @service.val2 =  @if (service.div() != -1)
+{@service.div()}
+else
+{<span> Exception: Division by zero</span>}</div>
+
+

@@ -1,0 +1,17 @@
+﻿@model WebApplication4.Models.Actions
+@{
+    ViewData["Title"] = "PassUsingModel";
+}
+<h1>@ViewData["Title"]</h1>
+<b>
+    <div>Rand Value First : @Model.val1</div>
+    <div>Rand Value Second : @Model.val2</div>
+    <div>Add: </div>
+</b>
+<div> @Model.val1 +  @Model.val2 = @Model.add</div>
+<b><div>Sub : </div></b>
+<div>@Model.val1 -  @Model.val2 =  @Model.sub</div>
+<b><div>Mult : </div></b>
+<div>@Model.val1 *  @Model.val2 =  @Model.mul</div>
+<b><div>Div :</div></b>
+<div>@Model.val1 /  @Model.val2 =  @if (Model.val2 != 0) {@Model.div} else {<span> Exception: Division by zero</span>}</div>

@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Calc Service Demonstration";
+}
+<h1>@ViewData["Title"]</h1>
+<b>
+    <ul>
+        <li>
+            <a asp-area="" asp-controller="CalcService" asp-action="PassUsingModel">Using Model Calc</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="CalcService" asp-action="PassUsingVievData">Using VievData Calc</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="CalcService" asp-action="PassUsingVievBag">Using VievBag Calc</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="CalcService" asp-action="AccessServiceDirectly">Using Service Injection Calc</a>
+        </li>
+    </ul>

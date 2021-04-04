@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "PassUsingVievData";
+}
+<h1>@ViewData["Title"]</h1>
+@for (int i = 1; i <= 10; i++)
+{
+    string Line = "Line" + i;
+    if ((i < 4) || (i % 2 == 1))
+    {<div><b>@ViewData[Line]</b></div>}
+    else {<div>@ViewData[Line]</div>;}
+}
